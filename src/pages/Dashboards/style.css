@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.DashboardPage{
+    background-color: black;
+    height: 100vh;
+    margin-left: 25px;
+}

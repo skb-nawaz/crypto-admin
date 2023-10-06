@@ -1,0 +1,26 @@
+.crypto-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  .crypto-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .crypto-details {
+    flex: 1;
+  }
+  
+  .crypto-name {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .crypto-balance,
+  .crypto-price,
+  .crypto-assets {
+    margin: 0;
+  }
+  

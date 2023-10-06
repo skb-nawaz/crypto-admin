@@ -1,0 +1,41 @@
+/* Sidebar */
+.drawerPaper {
+    width: 240px; /* Replace with your desired width in pixels */
+    background-color: #333;
+    color: white;
+    transition: width 0.3s;
+  }
+  
+  .menu-item:hover .menu-icon {
+    transform: scale(1.1); /* Add a scale animation on hover for icons */
+    color: lightgreen !important; /* Change icon color on hover */
+  }
+  
+  .menu-item:hover .menu-text {
+    color: lightgreen ; /* Change text color on hover */
+    
+  }
+  
+  .menu-icon {
+    color: white;
+    transition: transform 0.2s, color 0.2s; /* Add transition for the icon */
+  }
+  
+  .menu-text {
+    color: white;
+    transition: color 0.2s; /* Add transition for the text */
+  }
+  
+  .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: black !important;
+    color: white;
+  }
+
+  .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    color: white !important;
+  }
+
+  .selected-item {
+    background-color: yellow; /* You can change this to your desired color */
+    /* Add any other styles you want for selected items */
+  }

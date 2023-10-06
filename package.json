@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.1",
+    "cryptocurrency-icons": "^0.18.1",
     "react": "^18.2.0",
+    "react-cryptocoins": "^1.0.11",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
+    "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "react-web3-icons": "^1.7.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
