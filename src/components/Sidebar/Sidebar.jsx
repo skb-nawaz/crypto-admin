@@ -12,17 +12,20 @@ import BuildIcon from '@mui/icons-material/Build';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpIcon from '@mui/icons-material/Help';
 import BugReportIcon from '@mui/icons-material/BugReport';
+import { SiVscodium } from "react-icons/si";
+import {Eth} from 'react-web3-icons';
 import './style.css';
 
 const drawerWidth = 240;
 
 function Sidebar() {
   const [selectedItem, setSelectedItem] = useState(null);
-  const navigate = useNavigate(); // Use useNavigate hook for navigation
+  const navigate = useNavigate(); 
+  const transparentBackgroundColor = 'rgba(144, 238, 144, 0.1)';
 
   const handleMenuItemClick = (index, path) => {
     setSelectedItem(index);
-    navigate(path); // Redirect to the corresponding path
+    navigate(path); 
   };
 
   const menuItems = [
@@ -47,14 +50,26 @@ function Sidebar() {
           paper: 'drawerPaper',
         }}
       >
-        <div className="drawerHeader">Sidebar</div>
+        <div className="drawerHeader">
+          <div className="logo-container">
+          <SiVscodium style={{fontSize:'50'}}/>
+          <div>
+          <p style={{fontSize:'2rem', margin:'0'}}> transferto</p>
+          <p style={{margin:'0'}}>Powered by LI.FI</p>
+          </div>
+          </div>
+          <div className='icon-box'>
+          <Eth style={{ fontSize: '1.5rem' }} />
+          <p>0x8574269863147</p>
+          </div> 
+        </div>
         <List style={{ background: 'black' }}>
           {menuItems.map((item, index) => (
             <ListItem
               key={index}
               button
               className={`menu-item ${selectedItem === index ? 'selected' : ''}`}
-              style={{ background: selectedItem === index ? 'yellow' : 'black' }}
+              style={{ background: selectedItem === index ? transparentBackgroundColor : 'black' }}
               onClick={() => handleMenuItemClick(index, item.path)}
             >
               <ListItemIcon className="menu-icon" style={{ color: 'white' }}>
@@ -65,7 +80,6 @@ function Sidebar() {
           ))}
         </List>
       </Drawer>
-      {/* Render the nested routes */}
       <div className="content">
         <Outlet />
       </div>

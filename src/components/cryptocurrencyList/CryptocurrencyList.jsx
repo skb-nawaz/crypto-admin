@@ -1,99 +1,61 @@
 import React from 'react';
 import "./style.css"
+import { FaWallet } from 'react-icons/fa';
 
-const data = {
-  cryptos: [
-    {
-      id: 'bitcoin',
-      name: 'Bitcoin',
-      symbol: 'btc',
-      image: null,
-      currentPrice: '27560',
-    },
-    {
-      id: 'ethereum',
-      name: 'Ethereum',
-      symbol: 'eth',
-      image: null,
-      currentPrice: '1618.22',
-    },
-    {
-      id: 'tether',
-      name: 'Tether',
-      symbol: 'usdt',
-      image: null,
-      currentPrice: '0.998836',
-    },
-    {
-      id: 'binancecoin',
-      name: 'BNB',
-      symbol: 'bnb',
-      image: null,
-      currentPrice: '211.24',
-    },
-    {
-      id: 'ripple',
-      name: 'XRP',
-      symbol: 'xrp',
-      image: null,
-      currentPrice: '0.51962',
-    },
-    {
-      id: 'usd-coin',
-      name: 'USDC',
-      symbol: 'usdc',
-      image: null,
-      currentPrice: '0.998352',
-    },
-    {
-      id: 'staked-ether',
-      name: 'Lido Staked Ether',
-      symbol: 'steth',
-      image: null,
-      currentPrice: '1620.08',
-    },
-    {
-      id: 'solana',
-      name: 'Solana',
-      symbol: 'sol',
-      image: null,
-      currentPrice: '22.82',
-    },
-    {
-      id: 'cardano',
-      name: 'Cardano',
-      symbol: 'ada',
-      image: null,
-      currentPrice: '0.260098',
-    },
-    {
-      id: 'dogecoin',
-      name: 'Dogecoin',
-      symbol: 'doge',
-      image: null,
-      currentPrice: '0.060892',
-    },
-  ],
-};
 
-const CryptocurrencyList = () => {
-  const cryptos = data.cryptos;
+const CryptocurrencyList = (props) => {
+  const {coindata}=props
+  const cryptos = coindata?.data?.cryptos;
+  console.log(cryptos)
+ 
 
   return (
+    <div className="crypto-list">
+      <div className="heading-container">
+      <div className='inside-container' >
+      <div className='wallet-container'>
+      <FaWallet size={22} />
+      <p>Wallet</p>
+    </div>
     <div>
-      {cryptos.map((crypto) => (
+       <input
+        type="checkbox"
+        // style={{ display: 'none' }}
+      />
+      <span>Hide small balances</span>
+    </div>
+      </div>
+      <div>
+        <p>$5248.97</p>
+      </div>
+      </div>
+      <div className='details-box'>
+        <p className='heading1'>Assets</p>
+        <p className='heading2'>CurrentPrice</p>
+        <p className='heading3'>MarketCap</p>
+        <p className='heading4'>TotalVolume</p>
+      </div>
+      <div className='map-components'>
+        <div >      
+          {cryptos?.map((crypto) => (
         <div className="crypto-container" key={crypto.id}>
           <div className="crypto-icon">
             <img src={crypto.image} alt={`${crypto.name} Icon`} />
+            <div>
+            <p className="crypto-name">{crypto.name}</p>
+            <p className="crypto-name">exchange: Binance</p>
+            </div>
           </div>
           <div className="crypto-details">
-            <p className="crypto-name">{crypto.name}</p>
-            <p className="crypto-balance">Balance: Your Balance</p>
-            <p className="crypto-price">Price: {crypto.currentPrice}</p>
-            <p className="crypto-assets">Assets: Your Assets</p>
+            <p className="crypto-balance">{crypto.currentPrice}</p>
+            <p className="crypto-price">{crypto.marketCap}</p>
+            <p className="crypto-assets">{crypto.totalVolume}</p>
           </div>
         </div>
+        
       ))}
+      </div>
+      </div>
     </div>
   );
 };

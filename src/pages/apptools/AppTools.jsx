@@ -1,8 +1,11 @@
 import React from 'react'
+import "./style.css"
 
 const AppTools = () => {
   return (
-    <div>AppTools</div>
+    <div className='apptools'>
+      <h1>App tools</h1>
+    </div>
   )
 }
 

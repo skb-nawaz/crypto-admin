@@ -1,8 +1,11 @@
 import React from 'react'
+import "./style.css"
 
 const NFT = () => {
   return (
-    <div>NFT</div>
+    <div className='NFT'>
+      <h1>NFT</h1>
+    </div>
   )
 }
 

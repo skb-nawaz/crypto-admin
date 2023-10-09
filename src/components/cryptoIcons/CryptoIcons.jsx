@@ -1,6 +1,7 @@
 import React from 'react';
 import {Aragon,Ltc,Shib,Arb2,Usdt,DaiMono,Xrp2,BnbMono, Looks2,MaticMono,Btc2,Usdc,Ada,Eth,Dai,Doge,Matic,Bnb,Avax2,Cake} from 'react-web3-icons';
 import './style.css'
+import { AiFillAppstore} from 'react-icons/ai';
 
 
 function CryptoIcons() {
@@ -8,7 +9,7 @@ function CryptoIcons() {
     <div className='cryptoContainer'>
       <button className='btnstyle'>
       <div className='cryptoIconBox'>
-      <Btc2 style={{ fontSize: '1.5rem' }} />
+      <AiFillAppstore style={{ fontSize: '1.5rem' }} />
       <p value="All">All</p>
     </div>
     </button>
@@ -134,14 +135,10 @@ function CryptoIcons() {
     </button>
     <button className='btnstyle'>
       <div className='cryptoIconBox'>
-      <Looks2 style={{ fontSize: '1.5rem' }} />
-      <p value="showAll">showAll</p>
+      <p value="showAll">Show All</p>
     </div>
     </button>
-   
-
-    </div>
-
+   </div>
   );
 }
 

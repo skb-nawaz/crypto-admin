@@ -1,8 +1,11 @@
 import React from 'react'
+import "./style.css"
 
 const Settings = () => {
   return (
-    <div>Settings</div>
+    <div className='Settings'>
+      <h1>NFT</h1>
+    </div>
   )
 }
 

@@ -1,12 +1,22 @@
 .crypto-container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adjust the gap as needed */
+    gap: 20px;
+    color:white;
+    /* width: 80em; */
+    margin: 1.5em;
+
   }
   
   .crypto-icon img {
     width: 40px;
     height: 40px;
+  }
+  .crypto-icon{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 3rem;
   }
   
   .crypto-details {
@@ -15,7 +25,7 @@
   
   .crypto-name {
     font-weight: bold;
-    margin: 0;
+    margin: 0.5em;
   }
   
   .crypto-balance,
@@ -24,3 +34,85 @@
     margin: 0;
   }
   
+  .crypto-details{
+    display: flex;
+    justify-content: space-around;
+    width: 15em;
+    margin-right: 15em;
+  }
+ 
+
+  .details-box{
+    color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    /* width: 60em; */
+    margin: 0;
+    margin-right: 15em;
+    /* position:fixed;
+    top: 430px;
+    z-index: 1000; */
+
+  }
+.map-components{
+  display: flex;
+  flex-direction: column;
+  /* position:fixed;
+  top: 480px; */
+  background-color: black;
+  overflow:scroll;
+  overflow-x:hidden;
+  height:500px;
+  margin-bottom: 25px;
+  
+}
+
+.crypto-list{
+  margin-top: 1em;
+  margin-left: 15em;
+  color: white;
+}
+
+.heading2{
+  margin-left:3em ;
+} 
+
+.heading4{
+  /* margin-left: 1em; */
+}
+
+.heading-container{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border-bottom:0.1mm ridge rgba(144, 238, 144, 0.1) ;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.inside-container{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+}
+
+.wallet-container{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0.1rem;
+  background: transparent; 
+}
+
+/* Style the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 0.25rem; 
+}
